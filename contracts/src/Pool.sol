@@ -182,6 +182,12 @@ contract Pool {
     }
 
     /// @notice Collect a premium into pool capital.
+    /// @dev `from` is arbitrary, so an underwriter can pull from anyone who has
+    ///      approved this pool. That is safe only because underwriters are
+    ///      governor-approved contracts and PolicyManager always passes
+    ///      `msg.sender`. Any new underwriter must uphold the same rule, or the
+    ///      allowance of every LP becomes drainable.
+    // forge-lint: disable-next-line(arbitrary-send-erc20)
     function collectPremium(address from, uint256 amount) external onlyUnderwriter {
         if (amount == 0) revert ZeroAmount();
         emit PremiumReceived(from, amount);

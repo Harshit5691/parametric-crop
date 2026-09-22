@@ -1,0 +1,519 @@
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface-2: #1c2430;
+  --border: #2a333f;
+  --text: #e6edf3;
+  --muted: #8b98a6;
+  --accent: #4d9fff;
+  --alert: #f0883e;
+  --paid: #f85149;
+  --safe: #3fb950;
+  --radius: 10px;
+
+  color-scheme: dark;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.86em;
+  background: var(--surface-2);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.is-mono {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.9em;
+}
+
+.is-payout {
+  color: var(--paid);
+}
+
+/* ---------------------------------------------------------------- masthead */
+
+.masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.masthead__tag {
+  color: var(--muted);
+  font-size: 0.9rem;
+  max-width: 24rem;
+  text-align: right;
+}
+
+/* ----------------------------------------------------------------- notices */
+
+.notice {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.notice--error {
+  border-color: #6b3b2a;
+  background: #21150f;
+}
+
+.notice p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 0.35rem;
+}
+
+/* ------------------------------------------------------------------ badges */
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.badge--safe {
+  color: var(--safe);
+  background: #0f2a17;
+  border-color: #1d5c2e;
+}
+.badge--alert {
+  color: var(--alert);
+  background: #2b1a0c;
+  border-color: #6b431c;
+}
+.badge--paid {
+  color: var(--paid);
+  background: #2c1214;
+  border-color: #6f2a2c;
+}
+.badge--pending {
+  color: var(--muted);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+.badge--closed {
+  color: var(--muted);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+/* ----------------------------------------------------------------- summary */
+
+.summary,
+.pool,
+.burn,
+.phases {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.35rem 1.5rem;
+}
+
+.summary__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.summary__crop {
+  color: var(--muted);
+  font-size: 0.88rem;
+  margin-top: 0.2rem;
+}
+
+.summary__season {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+.summary__season strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.summary__stats,
+.pool__stats,
+.burn__stats,
+.phase-card__stats {
+  display: grid;
+  gap: 1rem 1.5rem;
+  margin: 0;
+}
+
+.summary__stats {
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+}
+
+.pool__stats,
+.burn__stats {
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.summary__stats dt,
+.pool__stats dt,
+.burn__stats dt,
+.phase-card__stats dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+
+.summary__stats dd,
+.pool__stats dd,
+.burn__stats dd,
+.phase-card__stats dd {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.dd-note {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+/* ------------------------------------------------------------------ phases */
+
+.phases h3 {
+  margin-bottom: 1rem;
+}
+
+.phases__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.phase-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.phase-card--alert {
+  border-color: #6b431c;
+}
+.phase-card--paid {
+  border-color: #6f2a2c;
+}
+
+.phase-card__head {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.phase-card__window {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+
+.phase-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.phase-card__weight {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.phase-card__stats {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.phase-card__stats dd {
+  font-size: 0.92rem;
+}
+
+/* ------------------------------------------------------------------- gauge */
+
+.gauge__track {
+  position: relative;
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #2d1a1c 0%, #243040 100%);
+  border: 1px solid var(--border);
+}
+
+/* The payout region: everything at or left of the trigger. The trigger-exit
+   band sits at 15%-85% of the track (see indexPosition), so full payout is at
+   15% and the trigger line at 85%. */
+.gauge__payout-zone {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 85%;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(
+    90deg,
+    rgba(248, 81, 73, 0.55) 0%,
+    rgba(248, 81, 73, 0.5) 15%,
+    rgba(240, 136, 62, 0.2) 85%
+  );
+}
+
+/* Tick marks at the exit and trigger thresholds. */
+.gauge__tick {
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  width: 1px;
+  background: var(--muted);
+  opacity: 0.55;
+}
+
+.gauge__marker {
+  position: absolute;
+  top: 50%;
+  width: 3px;
+  height: 20px;
+  background: var(--text);
+  border-radius: 2px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 2px var(--surface-2);
+  transition: left 0.4s ease;
+}
+
+.gauge__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
+.gauge__labels strong {
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+
+.gauge__labels em {
+  font-style: normal;
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.gauge__labels-right {
+  text-align: right;
+}
+
+/* -------------------------------------------------------------------- pool */
+
+.pool__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  gap: 1rem;
+}
+
+.pool__bar {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--surface-2);
+  margin-top: 1.1rem;
+  overflow: hidden;
+}
+
+.pool__bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+  transition: width 0.4s ease;
+  /* Keep a sliver visible at 0% so the bar reads as empty, not missing. */
+  min-width: 2px;
+}
+
+.pool__note {
+  margin-top: 0.6rem;
+  font-size: 0.78rem;
+}
+
+/* -------------------------------------------------------------------- burn */
+
+.burn__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.burn__headline {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.burn__headline strong {
+  color: var(--paid);
+  font-size: 1.15rem;
+}
+
+.burn__chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 120px;
+  padding-bottom: 1.1rem;
+  position: relative;
+}
+
+.burn__col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  position: relative;
+}
+
+.burn__bar-wrap {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.burn__bar {
+  width: 100%;
+  background: var(--surface-2);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  transition: height 0.3s ease;
+}
+
+.burn__bar.is-paid {
+  background: linear-gradient(180deg, var(--paid) 0%, #8c2f2f 100%);
+}
+
+.burn__year {
+  position: absolute;
+  bottom: -1.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.62rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.burn__stats {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ------------------------------------------------------------------ footer */
+
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer p:first-child {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.footer .muted {
+  font-size: 0.8rem;
+  max-width: 62ch;
+}
+
+@media (max-width: 640px) {
+  .masthead__tag {
+    text-align: left;
+  }
+  .phase-card__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}

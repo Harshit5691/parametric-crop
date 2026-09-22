@@ -8,3 +8,6 @@ contracts/out/
 contracts/cache/
 contracts/broadcast/
 contracts/lib/
+dashboards/node_modules/
+dashboards/dist/
+dashboards/src/contracts/addresses.json

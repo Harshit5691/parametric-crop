@@ -8,8 +8,12 @@ optimizer = true
 optimizer_runs = 200
 via_ir = false
 
-# The vector test reads the file the Python suite generates.
-fs_permissions = [{ access = "read", path = "./test/vectors.json" }]
+# The vector test reads the file the Python suite generates; Deploy.s.sol
+# writes deployed addresses where the dashboard can import them.
+fs_permissions = [
+    { access = "read", path = "./test/vectors.json" },
+    { access = "read-write", path = "../dashboards/src/contracts" },
+]
 
 [fmt]
 line_length = 100
