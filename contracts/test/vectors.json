@@ -1,0 +1,77 @@
+{
+  "count": 9,
+  "payout_cases": [
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 0,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 1000000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 10000,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 1000000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 14600,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 1000000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 15000,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 800000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 15600,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 500000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 16100,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 250000
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 16600,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 0
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 20000,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 0
+    },
+    {
+      "trigger_mm_x100": 16600,
+      "exit_mm_x100": 14600,
+      "observed_mm_x100": 40000,
+      "weight_bps": 10000,
+      "sum_insured_units": 1000000,
+      "expected_payout_units": 0
+    }
+  ]
+}

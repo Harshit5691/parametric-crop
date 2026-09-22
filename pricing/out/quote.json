@@ -1,0 +1,337 @@
+{
+  "policy": {
+    "region": "Yavatmal, Vidarbha, Maharashtra",
+    "crop": "kharif soybean",
+    "lat": 20.39,
+    "lon": 78.13,
+    "index": "cumulative_rainfall_mm",
+    "sum_insured_inr": 2000000.0,
+    "phases": [
+      {
+        "name": "sowing",
+        "start": "06-15",
+        "end": "07-31",
+        "weight_bps": 2500,
+        "trigger_mm_x100": 29200,
+        "exit_mm_x100": 23100
+      },
+      {
+        "name": "flowering",
+        "start": "08-05",
+        "end": "09-10",
+        "weight_bps": 5500,
+        "trigger_mm_x100": 16600,
+        "exit_mm_x100": 14600
+      },
+      {
+        "name": "maturity",
+        "start": "09-11",
+        "end": "10-15",
+        "weight_bps": 2000,
+        "trigger_mm_x100": 3000,
+        "exit_mm_x100": 800
+      }
+    ]
+  },
+  "pricing": {
+    "seasons": 30,
+    "window": [
+      1995,
+      2024
+    ],
+    "expected_loss_inr": 130304.25,
+    "expected_loss_rate": 0.065152,
+    "premium_inr": 182425.95,
+    "premium_rate": 0.091213,
+    "premium_units": 1824259463,
+    "hit_rate": 0.3,
+    "payout_seasons": 9,
+    "max_historical_payout_inr": 1100000.0,
+    "var95_inr": 610500.0,
+    "loading": {
+      "capital_cost": 0.1,
+      "basis_risk_buffer": 0.15,
+      "margin": 0.1,
+      "expense": 0.05
+    }
+  },
+  "history": [
+    {
+      "year": 1995,
+      "observed_mm": {
+        "sowing": 502.4,
+        "flowering": 215.1,
+        "maturity": 136.0
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 1996,
+      "observed_mm": {
+        "sowing": 325.4,
+        "flowering": 237.6,
+        "maturity": 106.9
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 1997,
+      "observed_mm": {
+        "sowing": 524.9,
+        "flowering": 210.4,
+        "maturity": 78.3
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 1998,
+      "observed_mm": {
+        "sowing": 446.3,
+        "flowering": 182.6,
+        "maturity": 237.5
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 1999,
+      "observed_mm": {
+        "sowing": 357.6,
+        "flowering": 201.5,
+        "maturity": 261.8
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2000,
+      "observed_mm": {
+        "sowing": 577.8,
+        "flowering": 375.9,
+        "maturity": 10.4
+      },
+      "payout_inr": 356363.64
+    },
+    {
+      "year": 2001,
+      "observed_mm": {
+        "sowing": 219.0,
+        "flowering": 301.8,
+        "maturity": 136.5
+      },
+      "payout_inr": 500000.0
+    },
+    {
+      "year": 2002,
+      "observed_mm": {
+        "sowing": 393.9,
+        "flowering": 454.0,
+        "maturity": 4.5
+      },
+      "payout_inr": 400000.0
+    },
+    {
+      "year": 2003,
+      "observed_mm": {
+        "sowing": 525.6,
+        "flowering": 308.6,
+        "maturity": 91.0
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2004,
+      "observed_mm": {
+        "sowing": 239.1,
+        "flowering": 190.0,
+        "maturity": 82.6
+      },
+      "payout_inr": 433606.56
+    },
+    {
+      "year": 2005,
+      "observed_mm": {
+        "sowing": 546.9,
+        "flowering": 134.8,
+        "maturity": 143.7
+      },
+      "payout_inr": 1100000.0
+    },
+    {
+      "year": 2006,
+      "observed_mm": {
+        "sowing": 351.2,
+        "flowering": 376.0,
+        "maturity": 123.6
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2007,
+      "observed_mm": {
+        "sowing": 509.6,
+        "flowering": 325.8,
+        "maturity": 147.7
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2008,
+      "observed_mm": {
+        "sowing": 333.6,
+        "flowering": 327.2,
+        "maturity": 86.1
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2009,
+      "observed_mm": {
+        "sowing": 628.9,
+        "flowering": 274.3,
+        "maturity": 84.5
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2010,
+      "observed_mm": {
+        "sowing": 485.9,
+        "flowering": 529.5,
+        "maturity": 70.8
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2011,
+      "observed_mm": {
+        "sowing": 290.6,
+        "flowering": 436.5,
+        "maturity": 49.9
+      },
+      "payout_inr": 11475.41
+    },
+    {
+      "year": 2012,
+      "observed_mm": {
+        "sowing": 412.7,
+        "flowering": 513.9,
+        "maturity": 104.2
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2013,
+      "observed_mm": {
+        "sowing": 837.0,
+        "flowering": 319.0,
+        "maturity": 281.5
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2014,
+      "observed_mm": {
+        "sowing": 441.2,
+        "flowering": 328.4,
+        "maturity": 20.2
+      },
+      "payout_inr": 178181.82
+    },
+    {
+      "year": 2015,
+      "observed_mm": {
+        "sowing": 304.9,
+        "flowering": 325.9,
+        "maturity": 137.6
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2016,
+      "observed_mm": {
+        "sowing": 734.6,
+        "flowering": 154.9,
+        "maturity": 315.6
+      },
+      "payout_inr": 610500.0
+    },
+    {
+      "year": 2017,
+      "observed_mm": {
+        "sowing": 348.9,
+        "flowering": 160.2,
+        "maturity": 185.7
+      },
+      "payout_inr": 319000.0
+    },
+    {
+      "year": 2018,
+      "observed_mm": {
+        "sowing": 542.2,
+        "flowering": 263.8,
+        "maturity": 170.7
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2019,
+      "observed_mm": {
+        "sowing": 498.5,
+        "flowering": 393.6,
+        "maturity": 169.9
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2020,
+      "observed_mm": {
+        "sowing": 295.3,
+        "flowering": 318.7,
+        "maturity": 217.8
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2021,
+      "observed_mm": {
+        "sowing": 458.7,
+        "flowering": 327.2,
+        "maturity": 245.9
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2022,
+      "observed_mm": {
+        "sowing": 888.9,
+        "flowering": 357.8,
+        "maturity": 238.6
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2023,
+      "observed_mm": {
+        "sowing": 475.7,
+        "flowering": 177.9,
+        "maturity": 148.7
+      },
+      "payout_inr": 0.0
+    },
+    {
+      "year": 2024,
+      "observed_mm": {
+        "sowing": 679.2,
+        "flowering": 303.8,
+        "maturity": 145.1
+      },
+      "payout_inr": 0.0
+    }
+  ],
+  "provenance": {
+    "source": "Open-Meteo ERA5 archive",
+    "calibration": {
+      "trigger_percentile": 0.08,
+      "exit_percentile": 0.02
+    }
+  }
+}
